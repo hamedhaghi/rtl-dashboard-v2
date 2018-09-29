@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>پنل مدیریت | افزودن محصول</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 sidebar ">
+            <img src="./img/user.png" alt="" class="rounded-circle img-fluid mx-auto d-block profile-image mt-2 mb-2">
+            <div class="text-center mb-5">
+                <i class="fa fa-circle fa-sm text-success mr-1"></i><a href="#" class="mr-1 ml-1">حامد حقی</a>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fa fa-tachometer-alt mr-2 ml-2"></i><span>داشبورد</span></a>
+                </li>
+                <li><a href="orders.html"><i class="fa fa-shopping-bag mr-2 ml-2"></i><span>سفارشات</span>
+                    <span class="badge badge-danger badge-pill font-weight-bold float-left mt-1 animated shake sidebar-badge">10</span></a>
+                </li>
+                <li class="menu">
+                    <a data-toggle="collapse" href="#products">
+                        <i class="fa fa-th-large mr-2 ml-2"></i><span>محصولات</span>
+                        <i class="fa fa-angle-right float-left sidebar-arrow menu-arrow"></i>
+                    </a>
+                    <ul class="collapse" id="products">
+                        <li class="focus"><a href="product.html"><i
+                                class="fa fa-dot-circle sidebar-arrow ml-2"></i><span>افزودن محصول</span></a>
+                        </li>
+                        <li><a href="products.html"><i class="fa fa-dot-circle sidebar-arrow ml-2"></i><span>لیست محصولات</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu">
+                    <a data-toggle="collapse" href="#tags">
+                        <i class="fa fa-tags mr-2 ml-2"></i><span>تگ ها</span>
+                        <i class="fa fa-angle-right float-left sidebar-arrow menu-arrow"></i>
+                    </a>
+                    <ul class="collapse" id="tags">
+                        <li><a href="tag.html"><i class="fa fa-dot-circle sidebar-arrow ml-2"></i><span>افزودن تگ</span></a>
+                        </li>
+                        <li><a href="tags.html"><i
+                                class="fa fa-dot-circle sidebar-arrow ml-2"></i><span>لیست تگ ها</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
+            <div class="alert alert-dismissible alert-success text-right direction-rtl" role="alert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>اطلاعات با موفقیت ذخیره شد</strong>.
+            </div>
+            <div class="row direction-rtl mt-2">
+                <div class="col-sm-12">
+                    <h2 class="text-right text-primary">افزودن محصول</h2>
+                    <hr class="bg-info">
+                </div>
+
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-1">
+                    <div class="card direction-rtl">
+                        <form action="">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+                                                   href="#general" role="tab" aria-controls="pills-home"
+                                                   aria-selected="true">عمومی</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill"
+                                                   href="#categories" role="tab" aria-controls="pills-profile"
+                                                   aria-selected="false">دسته بندی و تگ</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill"
+                                                   href="#seo" role="tab" aria-controls="pills-contact"
+                                                   aria-selected="false">سئو</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="pills-picture-tab" data-toggle="pill"
+                                                   href="#picture" role="tab" aria-controls="pills-picture-tab"
+                                                   aria-selected="false">تصویر</a>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="general" role="tabpanel"
+                                                 aria-labelledby="pills-home-tab">
+                                                <div class="form-group w-75 d-block mx-auto direction-rtl text-right">
+                                                    <label for="name" class="font-weight-bold">نام محصول :</label>
+                                                    <input type="text" name="name" id="name" class="form-control"
+                                                           required="required" autocomplete="off">
+                                                </div>
+                                                <div class="form-group w-75 d-block mx-auto direction-rtl text-right">
+                                                    <label for="code" class="font-weight-bold">کد محصول :</label>
+                                                    <input type="text" name="code" id="code" class="form-control"
+                                                           required="required" autocomplete="off">
+                                                </div>
+                                                <div class="form-group w-75 d-block mx-auto direction-rtl text-right">
+                                                    <label for="description" class="font-weight-bold">توضیحات محصول
+                                                        :</label>
+                                                    <textarea name="description" id="description" cols="30" rows="10"
+                                                              class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="categories" role="tabpanel"
+                                                 aria-labelledby="pills-profile-tab">
+                                                <div class="form-group w-75 d-block mx-auto direction-rtl text-right">
+                                                    <label for="category" class="font-weight-bold">انتخاب دسته بندی
+                                                        :</label>
+                                                    <select name="category" id="category"
+                                                            class="form-control placeholder" multiple="multiple">
+                                                        <option value="1">خانه</option>
+                                                        <option value="1">رایانه</option>
+                                                        <option value="1">پوشاک</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group w-75 d-block mx-auto direction-rtl text-right">
+                                                    <label for="tag" class="font-weight-bold">افزودن تگ :</label>
+                                                    <select name="tag" id="tag" class="form-control tag"   multiple="multiple">
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="seo" role="tabpanel"
+                                                 aria-labelledby="pills-contact-tab">
+                                                <div class="form-group w-75 d-block mx-auto direction-rtl text-right">
+                                                    <label for="meta_keyword" class="font-weight-bold">کلمات کلیدی
+                                                        :</label>
+                                                    <input type="text" name="meta_keyword" id="meta_keyword"
+                                                           class="form-control" autocomplete="off">
+                                                </div>
+                                                <div class="form-group w-75 d-block mx-auto direction-rtl text-right">
+                                                    <label for="meta_description" class="font-weight-bold">توضیحات کلیدی
+                                                        :</label>
+                                                    <textarea name="meta_description" id="meta_description" cols="30"
+                                                              rows="10" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="picture" role="tabpanel"
+                                                 aria-labelledby="pills-contact-tab">
+                                                <div class="form-group w-75 d-block mx-auto direction-rtl text-right">
+                                                    <label for="file" class="font-weight-bold">انتخاب تصویر :</label>
+                                                    <input type="file" name="file" id="file" class="form-control">
+                                                </div>
+                                                <div class="form-group w-75 d-block mx-auto direction-rtl text-right">
+                                                    <h4>تصویر فعلی :</h4>
+                                                    <img src="img/user.png" alt="" class="img-fluid img-thumbnail">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer direction-rtl text-right">
+                                <button type="submit" name="submit" class="btn btn-success"><span
+                                        class="m-3">ذخیره</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/select2.min.js"></script>
+<script>
+    //tags
+    $(".tag").select2({
+        tags: true,
+        placeholder: '',
+        dir: "ltr",
+        theme: "bootstrap",
+        tokenSeparators: [',']
+    });
+
+    $(".placeholder").select2({
+        placeholder: '',
+        dir: "ltr",
+        theme: "bootstrap",
+        tokenSeparators: [',']
+    });
+
+</script>
+<script src="./js/ckeditor-4/ckeditor.js"></script>
+<script src="./js/ckeditor-4/my-config.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>

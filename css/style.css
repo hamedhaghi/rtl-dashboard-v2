@@ -1,0 +1,157 @@
+@import "bootstrap.min.css";
+@import "../font/fontawesome-free-5.3.1-web/css/all.css";
+@import "animate.min.css";
+@import "select2.min.css";
+@import "select2-bootstrap.min.css";
+@font-face {
+    font-family: 'Shabnam';
+    src: url('../font/shabnam-font-v2.4.0/Farsi-Digits/Shabnam-FD.eot');
+    src: url('../font/shabnam-font-v2.4.0/Farsi-Digits/Shabnam-FD.eot?#iefix') format('FontName-opentype'),
+         url('../font/shabnam-font-v2.4.0/Farsi-Digits/Shabnam-FD.woff') format('woff'),
+         url('../font/shabnam-font-v2.4.0/Farsi-Digits/Shabnam-FD.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    font-family: 'Shabnam';
+    background : #eaeaea;
+    margin: 0;
+    padding: 0;
+
+
+
+}
+.sidebar {
+    z-index: 1031;
+    background: #0e141f;
+    color: #fff;
+    height: 100%;
+    right: 0;
+    padding: 0;
+    box-shadow: 0 0 8px #000;
+    text-align: right;
+    direction: rtl;
+    font-size: .85em;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        top: 0;
+        clear: both;
+        margin: 0 auto;
+        position: relative;
+
+
+    }
+}
+
+.profile-image {
+    height: 100px;
+    width: 100px;
+}
+
+.sidebar a {
+    color: #fff;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.sidebar ul li {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border-top: dotted 1px rgba(240,240,240,0.24);
+    vertical-align: center;
+}
+
+.sidebar ul li:last-child {
+    border-bottom: dotted 1px rgba(240,240,240,0.24);
+}
+
+.sidebar ul li ul li{
+    border-top: none;
+    border-bottom: dotted 1px rgba(240,240,240,0.24);
+
+}
+.sidebar ul li ul li:last-child {
+   border-bottom: none;
+}
+
+.sidebar ul li ul li:first-child {
+    margin-top: 5px;
+}
+
+.sidebar ul li:hover {
+    background: rgba(35, 44, 74, 0.89);
+    transition: all .3s;
+}
+
+.sidebar ul li ul li:hover {
+    background: rgba(42, 71, 107, 0.89);
+    transition: all .3s;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    transition: all .3s;
+}
+
+.sidebar ul li a:hover {
+    color: #fff !important;
+    padding-right: 15px;
+    transition: all .3s;
+}
+
+.sidebar ul li ul li a:hover {
+    color: #fff !important;
+    padding-right: 20px;
+    transition: all .3s;
+}
+
+.sidebar ul li i {
+    font-size: 1.4em;
+}
+
+.sidebar-arrow {
+    font-size: .85em !important;
+    margin-top: 5px;
+}
+
+
+.focus{
+    background: #008cba;
+}
+
+
+.direction-rtl {
+    direction: rtl;
+}
+
+.sidebar-badge {
+    font-size: .95em;
+}
+
+
+.dataTables_info {
+    text-align: right;
+}
+
+.dataTables_filter, .dataTables_length {
+    margin-top: 30px;
+}
+
+
+
