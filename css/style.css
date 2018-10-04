@@ -3,6 +3,7 @@
 @import "animate.min.css";
 @import "select2.min.css";
 @import "select2-bootstrap.min.css";
+@import "bootstrap-toggle.min.css";
 @font-face {
     font-family: 'Shabnam';
     src: url('../font/shabnam-font-v2.4.0/Farsi-Digits/Shabnam-FD.eot');
@@ -155,3 +156,12 @@ body {
 
 
 
+span.toggle-handle.btn.btn-default{
+    background: #fff;
+    border: solid 1px #ccc;
+}
+
+label.btn.btn-default.active.toggle-off
+{
+    border: solid 1px #ccc;
+}
