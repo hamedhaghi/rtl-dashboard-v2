@@ -165,3 +165,7 @@ label.btn.btn-default.active.toggle-off
 {
     border: solid 1px #ccc;
 }
+
+.exit {
+    color : #d9d9bb !important;
+}
