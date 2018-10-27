@@ -4,6 +4,7 @@
 @import "select2.min.css";
 @import "select2-bootstrap.min.css";
 @import "bootstrap-toggle.min.css";
+@import "../js/DataTables/datatables.min.css";
 @font-face {
     font-family: 'Shabnam';
     src: url('../font/shabnam-font-v2.4.0/Farsi-Digits/Shabnam-FD.eot');
@@ -168,4 +169,33 @@ label.btn.btn-default.active.toggle-off
 
 .exit {
     color : #d9d9bb !important;
+}
+
+.dataTables_info {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.dataTables_filter, .dataTables_length, .dt-buttons.btn-group {
+    margin-top: 10px;
+}
+
+#myTable_length {
+    text-align: right;
+    float: right;
+    margin-right: 5px;
+}
+
+#myTable_filter {
+    float: right;
+}
+
+.dt-buttons.btn-group
+{
+    float: left;
+    margin-left: 5px;
+}
+
+#myTable_paginate {
+    text-align: left;
 }

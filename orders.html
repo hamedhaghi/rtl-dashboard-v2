@@ -6,7 +6,6 @@
     <title>پنل مدیریت | سفارشات</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/dataTables.bootstrap4.min.css"/>
 </head>
 <body>
 <div class="container-fluid">
@@ -63,7 +62,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-1">
                     <div class="card">
                         <div class="card-body p-0">
-                            <div class="table-responsive">
+                           
                                 <table id="myTable" class="table table-hover table-striped">
                                     <thead class="thead-dark text-center">
                                     <tr>
@@ -726,7 +725,7 @@
                                     </tr>
                                     </tbody>
                                 </table>
-                            </div>
+                          
                         </div>
                     </div>
                 </div>
@@ -739,39 +738,59 @@
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/popper.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/jquery.dataTables.min.js"></script>
-<script src="./js/dataTables.bootstrap4.min.js"></script>
+<script src="./js/DataTables/datatables.min.js"></script>
 <script>
+  
     $('#myTable').DataTable({
-        "pageLength": 25,
-        "language": {
-            "decimal":        "",
-            "emptyTable":     "رکوردی وجود ندارد",
-            "info":           "نمایش _START_ تا _END_ از _TOTAL_ ",
-            "infoEmpty":      "",
-            "infoFiltered":   "",
-            "infoPostFix":    "",
-            "thousands":      ",",
-            "lengthMenu":     "تعداد سطر _MENU_",
-            "loadingRecords": "در حال برگزاری ...",
-            "processing":     "در حال پردازش ...",
-            "search":         "",
-            "zeroRecords":    "رکوردی یافت نشد",
-            "paginate": {
-                "first":      "",
-                "last":       "",
-                "next":       "بعدی",
-                "previous":   "قبلی"
+        "dom": 'Blfrtip',
+        buttons: [
+            {
+                extend: 'print',
+                text: 'چاپ',
+                exportOptions: {
+                    columns: ':not(:last-child)',
+                }
             },
-            "aria": {
-                "sortAscending":  ": ترتیب صعودی",
-                "sortDescending": ": ترتیب نزولی"
+            {
+                extend: 'excel',
+                text: 'فایل اکسل',
+                exportOptions: {
+                    columns: ':not(:last-child)',
+                }
+            },
+        ],
+        autoWidth: true,
+        responsive: true,
+        pageLength: 25,
+        language: {
+            decimal:        "",
+            emptyTable:     "رکوردی وجود ندارد",
+            info:           "نمایش _START_ تا _END_ از مجموع _TOTAL_  مورد",
+            infoEmpty:      "",
+            infoFiltered:   "",
+            infoPostFix:    "",
+            thousands:      ",",
+            lengthMenu:     "تعداد سطر _MENU_",
+            loadingRecords: "در حال برگزاری ...",
+            processing:     "در حال پردازش ...",
+            search:         "",
+            zeroRecords:    "رکوردی یافت نشد",
+            paginate: {
+                first:      "",
+                last:       "",
+                next:       "بعدی",
+                previous:   "قبلی"
+            },
+            aria: {
+                sortAscending:  ": ترتیب صعودی",
+                sortDescending: ": ترتیب نزولی"
             }
         },
-        "columnDefs": [ {
-            "targets": 'no-sort',
-            "orderable": false,
-        } ]
+        columnDefs: [ {
+            targets: 'no-sort',
+            orderable: false,
+        } ],
+
     });
     $('.dataTables_filter input').attr('placeholder', 'جستجو ...');
 </script>
